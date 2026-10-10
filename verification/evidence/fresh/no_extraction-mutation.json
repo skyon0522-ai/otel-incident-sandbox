@@ -1,0 +1,11 @@
+{
+  "expected_failed_check": "correlation",
+  "changes": [
+    {
+      "path": "server/server.go",
+      "before_sha256": "b97b29fcca4bd46e6174e3bcf7d0f4e8ac371dd27479b19783e7551ceb868041",
+      "after_sha256": "733d5b4c805a461eec88422c082e93093be0a2ff3e5649f3d21fb1ce96f4ae89",
+      "diff": "--- \n+++ \n@@ -50,7 +50,7 @@\n \t\tsdktrace.WithResource(resource.NewWithAttributes(semconv.SchemaURL, semconv.ServiceName(\"SupportSandboxServer\"))),\n \t)\n \totel.SetTracerProvider(tp)\n-\totel.SetTextMapPropagator(propagation.TraceContext{})\n+\totel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator())\n \treturn tp, err\n }\n \n"
+    }
+  ]
+}

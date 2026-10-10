@@ -1,0 +1,435 @@
+{
+  "repository": "open-telemetry/opentelemetry-go-contrib",
+  "commit": "33d034d81ab04b64c460717c5f42080324ca281f",
+  "subtree_files": 46,
+  "retained_root_files": [
+    "LICENSE"
+  ],
+  "total_files": 47,
+  "source_root": "upstream",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_mode": "100644",
+      "git_blob_sha1": "f1aee0f11001cd9276c67fd2a998cb54f378d461",
+      "sha256": "1ae07514be1d7bb33f0698f8d91fb51b8b9fe1463157ec1c72081a49b9bc6f40",
+      "bytes": 12892,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/LICENSE",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/LICENSE"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/common.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "b32f99a934542704832d598e575933be749bb5ff",
+      "sha256": "b4f2698dddcbb2704a840a8d7cc421afd763d8f34d6e530d39a778043774f5fa",
+      "bytes": 1576,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/common.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/common.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/common_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "c349882e2051d808337d7153b2fdc2cee447d595",
+      "sha256": "3de81a56a00bacf52d84cde2c688ebe138b803bd1ee11c371a59edb475f54c30",
+      "bytes": 811,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/common_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/common_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/config.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "45d4ee1611e1800d9f9ff830f65f52a29793b8c5",
+      "sha256": "4f50a6d363c7446e6d2ed7cd8333124005f8707dc9b65f1e7de4aeccd32cbf97",
+      "bytes": 6461,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/config.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/config.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/config_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "bd832c33ee2d7948fd02c17253a0b76a8acd7064",
+      "sha256": "6a2b09a19df5036ea4f996c0308c7b291a8f19e3d76a7c2cd365dd25fd9402ba",
+      "bytes": 5288,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/config_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/config_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/doc.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "09a2103fe46afea289aff521df0d3a1ed0a7f600",
+      "sha256": "5fb33ec040bf1de03939973d5b13daf5cc6610284bb2b86c86296e7b33992c32",
+      "bytes": 233,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/doc.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/doc.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/example/Dockerfile",
+      "git_mode": "100644",
+      "git_blob_sha1": "56065b6e347a3347b898cf3e666fc642ceabca0b",
+      "sha256": "75dfcbe860789be4dfe6523c74d4b22cb7d7554613cb1657d8bca7eb58584fcf",
+      "bytes": 432,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/Dockerfile",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/Dockerfile"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/example/README.md",
+      "git_mode": "100644",
+      "git_blob_sha1": "166e697d846de84d31b975b139938561823a96c3",
+      "sha256": "41454d26c854bbed0e3e82c1a030bdbe0373bf110aa5cf8c871545d7be0eabf9",
+      "bytes": 740,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/README.md",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/README.md"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/example/client/client.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "83a910708d00dbce3421c919572c28f3d5995c8e",
+      "sha256": "a4fcb6926c37b63cce6645d7e47f660971bba12bee4016d1d4943da4f8608809",
+      "bytes": 2531,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/client/client.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/client/client.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/example/docker-compose.yml",
+      "git_mode": "100644",
+      "git_blob_sha1": "65240a8f9c8d42e63f8ff5a0af9acb6da7db57eb",
+      "sha256": "581d54c86c195d9f44a001e0899479b99d1bc79d26a0bd81113712075e3240c8",
+      "bytes": 542,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/docker-compose.yml",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/docker-compose.yml"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/example/go.mod",
+      "git_mode": "100644",
+      "git_blob_sha1": "ad5642831c9434536eff9a38e474682dd1d97aa7",
+      "sha256": "74d60b3bd139e76f61454612ce1c4d174c2847c9b9b5e00165795ff795b66394",
+      "bytes": 966,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/go.mod",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/go.mod"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/example/go.sum",
+      "git_mode": "100644",
+      "git_blob_sha1": "b2472632f1e1b2f004a2e280bae020aefee19f8f",
+      "sha256": "5ffcfd3123da10b4a54f5e5034392566838296c36665c93748d29e5c5f691be5",
+      "bytes": 3630,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/go.sum",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/go.sum"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/example/server/modd.conf",
+      "git_mode": "100644",
+      "git_blob_sha1": "04fcbff19bde29fa61adbc576687153b0b082d53",
+      "sha256": "7d4a0914ce45634e638b12587dd7570c2774bfeb576303191f6e02040ab7bae2",
+      "bytes": 270,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/server/modd.conf",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/server/modd.conf"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/example/server/server.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "1748f5469e0b3c4e39d07265357a7c98864c2f42",
+      "sha256": "e6c2d75ebdfa4e3fa4a44ba1c7dd334458ac9e1802c7de7d206d7585de8bd1ee",
+      "bytes": 2900,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/server/server.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/example/server/server.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/filters/filters.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "2bc412e39f65a725fe7e051dead07e1f23f33284",
+      "sha256": "d3e78967605cb1116e652c5e8b3d744009d8d2509254db1e5be4b71b440f2896",
+      "bytes": 2835,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/filters/filters.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/filters/filters.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/filters/filters_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "3f72d07063fbd8b5db2aece50594380c05991141",
+      "sha256": "d6dc895e58dd1541c1f289228d5bd3f8c26fc24979d054e59070f1ea01b1fa5b",
+      "bytes": 7116,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/filters/filters_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/filters/filters_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/filters/header.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "db0adae77d222355a4f766d6abbd88f15a5509a8",
+      "sha256": "222de22d288328ffab408df4914e434ab92a042321ea44eba7811570b5471bf3",
+      "bytes": 848,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/filters/header.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/filters/header.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/go.mod",
+      "git_mode": "100644",
+      "git_blob_sha1": "89449fe018743f12d45345c3e0ddbb3a1bc4f1fc",
+      "sha256": "49a010674b78446e1056aad24811c3adeb949785ce6c021f512189888cad5ec3",
+      "bytes": 734,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/go.mod",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/go.mod"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/go.sum",
+      "git_mode": "100644",
+      "git_blob_sha1": "bf99277d09b59bb44f70900ae344045b2701fae8",
+      "sha256": "6761879048e646214d92372b155243da5718285ce7ee8e83062eabe97a18c128",
+      "bytes": 3174,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/go.sum",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/go.sum"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/handler.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "d42f4f870836e419576492396f65c5375938b1d4",
+      "sha256": "78229d57e66c136ba1bd52827e3ea8f5420a80942906d69f47bffba8882318ae",
+      "bytes": 7149,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/handler.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/handler.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/handler_example_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "88d8e459bcb28fd302e2775424b3a3cee9bc398f",
+      "sha256": "f5ec35116b78141b17b8d395afeeaaab78dc08a17c193436cda5b9fe9da2f698",
+      "bytes": 2410,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/handler_example_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/handler_example_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/handler_multipart_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "a0ea4ea13bba64a9721ef05bc7aae3e3f460e9de",
+      "sha256": "a2973225d926114287c1df7068ec6c7088afdef6b63932f41bab2b4b422b3f97",
+      "bytes": 5807,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/handler_multipart_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/handler_multipart_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/handler_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "2cdf97cb95c0c619a6e6b0abae39553bbd75ba56",
+      "sha256": "aac09e5b1ecfa2dfca63431e7f9ea1b0a827cc3accc94468edf34f7b86ea7b96",
+      "bytes": 27971,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/handler_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/handler_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/request/body_wrapper.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "aeff4160467db4eb6666e9aa886ea54f52c18580",
+      "sha256": "3aa79361c3408d36fc9cfc786b03cf788ea3f1d1b88c253f49e07da28f366f9d",
+      "bytes": 1699,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/body_wrapper.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/body_wrapper.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/request/body_wrapper_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "ffba1607502aca2163994ecc1166d0be487760bf",
+      "sha256": "d9d72c19126b7ec3e091d3d7baa1859f9fdf1383701ae7fee0b0f2e21997afca",
+      "bytes": 1724,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/body_wrapper_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/body_wrapper_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/request/gen.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "98f7bdbfcfdabf4a2e929de45366734da061a8bb",
+      "sha256": "752e64d60decc482398e98f3f253b6d1c440861f6754080c1e98edecb207dcd1",
+      "bytes": 673,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/gen.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/gen.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/request/resp_writer_wrapper.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "6b523cb74feeeea655b332426519f12d1b100115",
+      "sha256": "04980168c15c68ba76d77550cd80a66584739d6e9039590f38f8cfe5c68df1ad",
+      "bytes": 3624,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/resp_writer_wrapper.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/resp_writer_wrapper.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/request/resp_writer_wrapper_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "ef04ec537a419c5b3169646bb153bb90586043ab",
+      "sha256": "876a5cd1fd303c0923bab1edc6e7ffed4e68e4d7c3d5836facb4730ed2ddf423",
+      "bytes": 1983,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/resp_writer_wrapper_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/request/resp_writer_wrapper_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/bench_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "e798d127d490aee3faf6a7f930a9c2b78cba82bb",
+      "sha256": "4c2b1c3c9bb4d1810786008d87c982fba1672ff30a200a979fbc4b61bd31a621",
+      "bytes": 1203,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/bench_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/bench_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/client.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "c275b5f0514c0dd28bbd3ef36cebc09a5fe9c0c3",
+      "sha256": "91897989c9e70c2f7b9bf7f9d6e044aabece75dfafed2cb31c10655e4c67670f",
+      "bytes": 9991,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/client.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/client.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/client_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "798b4549870ada55da6c8537321996634b3aa1c5",
+      "sha256": "2a3c26b9816bb96de007eb025e0a2971354fe3fee2acbc71dbb7b0867ba15a99",
+      "bytes": 9191,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/client_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/client_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/common_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "2ec5a3de82d166c96fc25a812557f2259316e744",
+      "sha256": "f08e4dd523b4b2f542316ea9a0a2341e1f514683d87baab8bf3cceceba7f8e5e",
+      "bytes": 1786,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/common_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/common_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/gen.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "fbcd4f6b230eb7f12747a68bb4a85cdf2fe9fc3b",
+      "sha256": "9a872143b7bf2dd590f28c23c35476e977099a2d9683fdad958707a09cadd076",
+      "bytes": 1888,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/gen.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/gen.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/httpconvtest_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "d1b80a2edd9d0623e2ec71bbd7a517bd82f3c4c9",
+      "sha256": "e6a7b32372585aa916e97563c2f6abe0ed47d8262113264f00af7e32f7996fdf",
+      "bytes": 13625,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/httpconvtest_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/httpconvtest_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/server.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "35e744e41d233d39f72aeff14a1c8cab7b8ec447",
+      "sha256": "ae774d8376b20615b9c5fbdc2bfcdd1850dea0cef66a6815863e247f49e3ceab",
+      "bytes": 10958,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/server.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/server.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/server_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "f6c41c9ac82daaa49f878d5ae6bd92599803b755",
+      "sha256": "697cd71b7ae9586b8d87e52ce88772f4ec6017e111bfc67a4bbb7d103d822034",
+      "bytes": 7775,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/server_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/server_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/util.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "1ec064b1d72f1dcecd6acf6d2a2f877d2c559391",
+      "sha256": "8882206bc38e791815978b8e3c840159340e9f7f6f8ee77e8d2daad4bc4f0356",
+      "bytes": 3302,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/util.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/util.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/internal/semconv/util_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "700aa5c31fec6cf1073f93e9e9b43ef1a5684700",
+      "sha256": "f5199593f4862ad30aade21f9f677cfd7c97baf07ee2ed41c5b2ffa2097e4072",
+      "bytes": 1801,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/util_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/internal/semconv/util_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/labeler.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "3c0fa99a25afd9c579226c031e04edfe848bea82",
+      "sha256": "8a94ff5af60ccaec08c3ef50cbf629fbc04a4840da2f81dc25abc0ca2af6c04a",
+      "bytes": 2923,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/labeler.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/labeler.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/labeler_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "c98c58531a138d6fadfa9538c60d0630197b6ca4",
+      "sha256": "0ed4a7d825b5ef5177ab219bbea83093546d7a0cfba5c8665198df96898851ca",
+      "bytes": 2211,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/labeler_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/labeler_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/start_time_context.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "9b6c0a889ba657fbdfb5ad67437c1aa87b12036a",
+      "sha256": "ef9c74a04ef01e83dd90bcffffa76ae07551e7159d0edbbc629fdad0984c89d3",
+      "bytes": 996,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/start_time_context.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/start_time_context.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/start_time_context_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "3ebcddf7a17357ea9694f52b8f236ec5125978c1",
+      "sha256": "91c2907feefe1475df07a3dcb09f9ceb983eee3cc2a1703f93128a4473c5d4b8",
+      "bytes": 446,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/start_time_context_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/start_time_context_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/transport.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "22bbcc737feab8682c4a506f627a3901ea40798f",
+      "sha256": "3c12b4ef13131482d6106f136643d30a35e04d8858ec070c5d1469b6a0e7c868",
+      "bytes": 12819,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/transport.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/transport.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/transport_example_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "35aea0f341ca7899f0b2a8c0c3eb525c99193927",
+      "sha256": "14da694a45d797c42323ecf53d0a65d5892f8da6f3c7c0c82afacc9946110f8f",
+      "bytes": 327,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/transport_example_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/transport_example_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/transport_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "29cf62b0eb8d4d10cbc2e3d994d2706fa0958565",
+      "sha256": "2a155b94a2f7bd821c91e249ce9416ed8a3986111eac44b3c01677dbe2390e87",
+      "bytes": 58225,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/transport_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/transport_test.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/version.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "05267f2fd25beb2b3ad4de85ff89b7b373898ec8",
+      "sha256": "92ab26cc736d093eab8b165fdf663ef4ff0c3c6a3d6016d45b8b84984ab4fb65",
+      "bytes": 197,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/version.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/version.go"
+    },
+    {
+      "path": "instrumentation/net/http/otelhttp/version_test.go",
+      "git_mode": "100644",
+      "git_blob_sha1": "d51441178b03d49369f381aa6461b4683208ef44",
+      "sha256": "bfa1ef99c7afff05e23cfcfeb1b00b40b5aa790592384116deb307e7724201d7",
+      "bytes": 741,
+      "source_url": "https://github.com/open-telemetry/opentelemetry-go-contrib/blob/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/version_test.go",
+      "raw_url": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-go-contrib/33d034d81ab04b64c460717c5f42080324ca281f/instrumentation/net/http/otelhttp/version_test.go"
+    }
+  ]
+}

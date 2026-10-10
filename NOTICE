@@ -1,0 +1,21 @@
+OTel Incident Sandbox
+
+This repository retains unchanged source from OpenTelemetry Go contrib,
+commit 33d034d81ab04b64c460717c5f42080324ca281f, under upstream/.
+The full 46-file otelhttp module and the complete 12,892-byte upstream LICENSE
+are retained. The LICENSE contains Apache-2.0 text and a Go Authors BSD notice.
+Original copyright, SPDX and other source notices remain unchanged.
+
+The active example/client/client.go and example/server/server.go are modified
+OpenTelemetry examples. Modifications add synthetic support-request cases,
+TraceContext-only propagation, header evidence and bounded loopback/process
+lifecycle. Their original Apache copyright/SPDX headers and prominent
+modification notices remain. The example module replacement path is modified
+to load the retained local source; dependency versions/checksums are preserved.
+
+Task-authored portability/verification glue, documentation and evidence
+packaging are distributed under the root MIT LICENSE. That license applies
+only to those authored additions and does not relicense upstream source or
+the modified Go example derivatives. Applicable upstream license text is
+available in upstream/LICENSE. Source identities and derivations are recorded
+in source-manifest.json and verification/derivation.json.

@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "url": "https://proxy.golang.org/github.com/davecgh/go-spew/@v/v1.1.1.info",
+      "relative_path": "github.com/davecgh/go-spew/@v/v1.1.1.info",
+      "sha256": "73de263267a4545708302d807be60fdb649c5c7b981d25302a638145fba0ec47",
+      "bytes": 50,
+      "purpose": "module graph metadata only; no extra source ZIP or execution"
+    },
+    {
+      "url": "https://proxy.golang.org/github.com/kr/pretty/@v/v0.3.1.info",
+      "relative_path": "github.com/kr/pretty/@v/v0.3.1.info",
+      "sha256": "8985c5adc09968b25ac3bc455e4dcd6fd9697f3bd4472b2b4d7a6d478ab39583",
+      "bytes": 185,
+      "purpose": "module graph metadata only; no extra source ZIP or execution"
+    },
+    {
+      "url": "https://proxy.golang.org/github.com/pmezard/go-difflib/@v/v1.0.0.info",
+      "relative_path": "github.com/pmezard/go-difflib/@v/v1.0.0.info",
+      "sha256": "97cbb0239d80e5221efd1f0aa645d120272bd3ee7975bd654f07a8ed0c2c2adc",
+      "bytes": 50,
+      "purpose": "module graph metadata only; no extra source ZIP or execution"
+    },
+    {
+      "url": "https://proxy.golang.org/github.com/rogpeppe/go-internal/@v/v1.14.1.info",
+      "relative_path": "github.com/rogpeppe/go-internal/@v/v1.14.1.info",
+      "sha256": "8932c27f46c77dc0b40a26dcca5a71677b3f47082d8c4c3a9ca68df8c7cec5fe",
+      "bytes": 198,
+      "purpose": "module graph metadata only; no extra source ZIP or execution"
+    },
+    {
+      "url": "https://proxy.golang.org/gopkg.in/check.v1/@v/v1.0.0-20201130134442-10cb98267c6c.info",
+      "relative_path": "gopkg.in/check.v1/@v/v1.0.0-20201130134442-10cb98267c6c.info",
+      "sha256": "9c410ddc8753b257045f2d6a25835f73a37ec16e58d2dec05af7f89b501c98ee",
+      "bytes": 78,
+      "purpose": "module graph metadata only; no extra source ZIP or execution"
+    },
+    {
+      "url": "https://proxy.golang.org/gopkg.in/yaml.v3/@v/v3.0.1.info",
+      "relative_path": "gopkg.in/yaml.v3/@v/v3.0.1.info",
+      "sha256": "0cdb0c9ac8c3b25dbd420a86ab27debfa469a8b48ee10560224704c2852ac6c0",
+      "bytes": 50,
+      "purpose": "module graph metadata only; no extra source ZIP or execution"
+    }
+  ]
+}

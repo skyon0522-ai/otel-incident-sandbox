@@ -1,0 +1,13 @@
+{
+	"Path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+	"Version": "v0.72.0",
+	"Replace": {
+		"Path": "<WORKSPACE>/copied/upstream/instrumentation/net/http/otelhttp",
+		"Dir": "<WORKSPACE>/copied/upstream/instrumentation/net/http/otelhttp",
+		"GoMod": "<WORKSPACE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+		"GoVersion": "1.26.0"
+	},
+	"Dir": "<WORKSPACE>/copied/upstream/instrumentation/net/http/otelhttp",
+	"GoMod": "<WORKSPACE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+	"GoVersion": "1.26.0"
+}

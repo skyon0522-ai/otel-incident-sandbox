@@ -1,0 +1,2 @@
+{"headers":{"Baggage":["username=customer.synthetic@example.test,api_token=synthetic-token-DO-NOT-USE-5f7d"],"Traceparent":["00-c08f5fd283d27ee13856d3579627282b-c25cbf88f6eb99b1-01"]},"url":"http://127.0.0.1:44683/support"}
+{"headers":{"Baggage":["username=customer.synthetic@example.test,api_token=synthetic-token-DO-NOT-USE-5f7d"],"Traceparent":["00-4f44aaf93a17138934025943e3cde064-a71cee68493a9c7d-01"]},"url":"http://127.0.0.1:44683/support?failure=503"}

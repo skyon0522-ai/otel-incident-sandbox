@@ -1,0 +1,2 @@
+{"headers":{"Traceparent":["00-9e35ed91d54f4bbfa6262326e17b1c0f-aab587fd1d5ea529-01"]},"url":"http://127.0.0.1:43185/support"}
+{"headers":{"Traceparent":["00-233e3196ae85c0df3c49d0712ff9791c-91de0cae97cb4832-01"]},"url":"http://127.0.0.1:43185/support?failure=503"}

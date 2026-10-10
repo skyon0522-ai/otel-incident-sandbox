@@ -1,0 +1,211 @@
+{
+  "started_at_utc": "2026-10-09T16:42:05.798374+00:00",
+  "go_binary": "<GO>",
+  "environment": {
+    "GOTOOLCHAIN": "local",
+    "GOWORK": "off",
+    "GOFLAGS": "-mod=readonly",
+    "GOMODCACHE": "<ACCEPTED_PRIVATE_SOURCE>/.go-cache/modules",
+    "GOCACHE": "<ACCEPTED_PRIVATE_SOURCE>/.go-cache/build",
+    "GOPATH": "<ACCEPTED_PRIVATE_SOURCE>/.go-cache/gopath",
+    "GOPROXY": "https://proxy.golang.org",
+    "GOSUMDB": "sum.golang.org",
+    "GODEBUG": "netdns=cgo"
+  },
+  "selected_tests": [
+    "TestHandlerBasics",
+    "TestHandlerRequestWithTraceContext",
+    "TestSpanStatus",
+    "TestTransportBasics",
+    "TestTransportErrorStatus"
+  ],
+  "commands": [
+    {
+      "tree": "toolchain",
+      "label": "version",
+      "argv": [
+        "<GO>",
+        "version"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>",
+      "exit_code": 0,
+      "elapsed_seconds": 0.153,
+      "stdout_path": "baseline-attempt2-logs/toolchain-version.stdout",
+      "stderr_path": "baseline-attempt2-logs/toolchain-version.stderr"
+    },
+    {
+      "tree": "original",
+      "label": "module",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/original/upstream/instrumentation/net/http/otelhttp",
+      "exit_code": 0,
+      "elapsed_seconds": 0.228,
+      "stdout_path": "baseline-attempt2-logs/original-module.stdout",
+      "stderr_path": "baseline-attempt2-logs/original-module.stderr"
+    },
+    {
+      "tree": "original",
+      "label": "package",
+      "argv": [
+        "<GO>",
+        "list",
+        "-json",
+        "."
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/original/upstream/instrumentation/net/http/otelhttp",
+      "exit_code": 0,
+      "elapsed_seconds": 40.572,
+      "stdout_path": "baseline-attempt2-logs/original-package.stdout",
+      "stderr_path": "baseline-attempt2-logs/original-package.stderr"
+    },
+    {
+      "tree": "original",
+      "label": "tests",
+      "argv": [
+        "<GO>",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=60s",
+        "-run",
+        "^(TestHandlerBasics|TestHandlerRequestWithTraceContext|TestSpanStatus|TestTransportBasics|TestTransportErrorStatus)$",
+        "."
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/original/upstream/instrumentation/net/http/otelhttp",
+      "exit_code": 0,
+      "elapsed_seconds": 80.052,
+      "stdout_path": "baseline-attempt2-logs/original-tests.stdout",
+      "stderr_path": "baseline-attempt2-logs/original-tests.stderr"
+    },
+    {
+      "tree": "copied",
+      "label": "module",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+      "exit_code": 0,
+      "elapsed_seconds": 0.218,
+      "stdout_path": "baseline-attempt2-logs/copied-module.stdout",
+      "stderr_path": "baseline-attempt2-logs/copied-module.stderr"
+    },
+    {
+      "tree": "copied",
+      "label": "package",
+      "argv": [
+        "<GO>",
+        "list",
+        "-json",
+        "."
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+      "exit_code": 0,
+      "elapsed_seconds": 7.899,
+      "stdout_path": "baseline-attempt2-logs/copied-package.stdout",
+      "stderr_path": "baseline-attempt2-logs/copied-package.stderr"
+    },
+    {
+      "tree": "copied",
+      "label": "tests",
+      "argv": [
+        "<GO>",
+        "test",
+        "-json",
+        "-count=1",
+        "-timeout=60s",
+        "-run",
+        "^(TestHandlerBasics|TestHandlerRequestWithTraceContext|TestSpanStatus|TestTransportBasics|TestTransportErrorStatus)$",
+        "."
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+      "exit_code": 0,
+      "elapsed_seconds": 14.649,
+      "stdout_path": "baseline-attempt2-logs/copied-tests.stdout",
+      "stderr_path": "baseline-attempt2-logs/copied-tests.stderr"
+    }
+  ],
+  "source_commit": "33d034d81ab04b64c460717c5f42080324ca281f",
+  "go_version": "go version go1.27.2 linux/amd64",
+  "local_source_proof": {
+    "original": {
+      "import_path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+      "package_dir": "<ACCEPTED_PRIVATE_SOURCE>/original/upstream/instrumentation/net/http/otelhttp",
+      "module_path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+      "module_dir": "<ACCEPTED_PRIVATE_SOURCE>/original/upstream/instrumentation/net/http/otelhttp",
+      "main": true,
+      "remote_version": null,
+      "source_files": [
+        "common.go",
+        "config.go",
+        "doc.go",
+        "handler.go",
+        "labeler.go",
+        "start_time_context.go",
+        "transport.go",
+        "version.go"
+      ]
+    },
+    "copied": {
+      "import_path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+      "package_dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+      "module_path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+      "module_dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+      "main": true,
+      "remote_version": null,
+      "source_files": [
+        "common.go",
+        "config.go",
+        "doc.go",
+        "handler.go",
+        "labeler.go",
+        "start_time_context.go",
+        "transport.go",
+        "version.go"
+      ]
+    }
+  },
+  "test_results": {
+    "original": {
+      "passed_tests_and_subtests": [
+        "TestHandlerBasics",
+        "TestHandlerRequestWithTraceContext",
+        "TestSpanStatus/200",
+        "TestSpanStatus/400",
+        "TestSpanStatus/500",
+        "TestSpanStatus",
+        "TestTransportBasics",
+        "TestTransportErrorStatus"
+      ],
+      "top_level_pass_count": 5,
+      "total_pass_events": 8,
+      "package_pass": true
+    },
+    "copied": {
+      "passed_tests_and_subtests": [
+        "TestHandlerBasics",
+        "TestHandlerRequestWithTraceContext",
+        "TestSpanStatus/200",
+        "TestSpanStatus/400",
+        "TestSpanStatus/500",
+        "TestSpanStatus",
+        "TestTransportBasics",
+        "TestTransportErrorStatus"
+      ],
+      "top_level_pass_count": 5,
+      "total_pass_events": 8,
+      "package_pass": true
+    }
+  },
+  "post_run_source_hashes_unchanged": true,
+  "finished_at_utc": "2026-10-09T16:44:30.815940+00:00",
+  "persistent_services_started": false,
+  "ephemeral_loopback_servers": "upstream tests close servers; all selected Go test processes exited"
+}

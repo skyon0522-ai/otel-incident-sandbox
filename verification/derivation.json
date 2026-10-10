@@ -1,0 +1,39 @@
+{
+  "accepted_verifier_sha256": "95c31b21c5a28ef030e7621a0417242c5c4a2859483e2dbe06c70e75cf17f951",
+  "curated_verifier_sha256": "95c31b21c5a28ef030e7621a0417242c5c4a2859483e2dbe06c70e75cf17f951",
+  "checking_and_mutation_semantics": "byte-identical accepted verifier; adapter supplies only layout/environment/build metadata",
+  "independent_review": "PASS_WITH_SCOPE_LIMITS; retained-artifact review, no suite rerun",
+  "example_derivation": [
+    {
+      "path": "example/go.mod",
+      "private_accepted_sha256": "69f2c7d66061bfebc2d41f73b85093dcacf3e2abded40144355be607726fc782",
+      "curated_sha256": "b4fca55896cba19ab1f43096393b2105050eba1738a3ea7b146bec4925922e37",
+      "changed": true,
+      "difference": "modification notice and local path configuration only"
+    },
+    {
+      "path": "example/go.sum",
+      "private_accepted_sha256": "5ffcfd3123da10b4a54f5e5034392566838296c36665c93748d29e5c5f691be5",
+      "curated_sha256": "5ffcfd3123da10b4a54f5e5034392566838296c36665c93748d29e5c5f691be5",
+      "changed": false,
+      "difference": "unchanged"
+    },
+    {
+      "path": "example/client/client.go",
+      "private_accepted_sha256": "47fa1aa9c39c548f5f7577535bc51e5d67b91dce3986a7eb7c38a14a2fc5f516",
+      "curated_sha256": "09c32f690c7afcae0e6ca783e062693e584acda0bea1df05c466399ca3229ece",
+      "changed": true,
+      "difference": "modification notice and local path configuration only"
+    },
+    {
+      "path": "example/server/server.go",
+      "private_accepted_sha256": "09de92b47ac790411634c3d3fe49dce1d90c7df9584a1faa3956a06247a7c463",
+      "curated_sha256": "b97b29fcca4bd46e6174e3bcf7d0f4e8ac371dd27479b19783e7551ceb868041",
+      "changed": true,
+      "difference": "modification notice and local path configuration only"
+    }
+  ],
+  "source_files_unchanged": 47,
+  "own_glue_license": "MIT; adapted Go derivatives retain Apache-2.0 notices and upstream full LICENSE",
+  "mit_template": "existing own-glue MIT license; attribution line changed only"
+}

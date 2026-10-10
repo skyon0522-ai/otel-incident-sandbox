@@ -1,0 +1,505 @@
+{
+  "started_at_utc": "2026-10-09T17:01:22.307668+00:00",
+  "cases": [
+    {
+      "case": "positive",
+      "checker_exit": 0,
+      "contract": {
+        "checks": {
+          "process_lifecycle": true,
+          "response_statuses": true,
+          "completeness": true,
+          "status": true,
+          "correlation": true,
+          "privacy_headers": true,
+          "wire_no_baggage": true,
+          "privacy_exported": true
+        },
+        "pass": true,
+        "client_span_count": 4,
+        "server_span_count": 2,
+        "trace_links": [
+          {
+            "status": 200,
+            "trace_id": "1ad1219ccd4adbf1925e1c959228aa6f",
+            "client_span_id": "a47f8e27f9781431",
+            "server_parent_id": "a47f8e27f9781431",
+            "matches": true
+          },
+          {
+            "status": 503,
+            "trace_id": "7d463d3d5bf9dd4c600fa03fc56d18fa",
+            "client_span_id": "225524441f50a5c8",
+            "server_parent_id": "225524441f50a5c8",
+            "matches": true
+          }
+        ],
+        "failed_checks": []
+      },
+      "lifecycle": {
+        "server_pid": 46226,
+        "client_pid": 46234,
+        "server_exit": 0,
+        "client_exit": 0,
+        "server_stopped": true,
+        "client_stopped": true,
+        "listener": "127.0.0.1:34105",
+        "listener_closed": true,
+        "server_argv": [
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/bin/server"
+        ],
+        "client_argv": [
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/bin/client",
+          "--server",
+          "http://127.0.0.1:34105/support",
+          "--headers",
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/positive/outbound-headers.jsonl"
+        ],
+        "cwd": "<ACCEPTED_PRIVATE_SOURCE>/adapted/example",
+        "termination": "SIGTERM then bounded graceful shutdown; post-exit connection probe"
+      },
+      "module_mapping": {
+        "Path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+        "Version": "v0.72.0",
+        "Replace": {
+          "Path": "../../copied/upstream/instrumentation/net/http/otelhttp",
+          "Dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+          "GoMod": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+          "GoVersion": "1.26.0"
+        },
+        "Dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+        "GoMod": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+        "GoVersion": "1.26.0"
+      }
+    },
+    {
+      "case": "baggage_leak",
+      "checker_exit": 1,
+      "contract": {
+        "checks": {
+          "process_lifecycle": true,
+          "response_statuses": true,
+          "completeness": true,
+          "status": true,
+          "correlation": true,
+          "privacy_headers": false,
+          "wire_no_baggage": false,
+          "privacy_exported": false
+        },
+        "pass": false,
+        "client_span_count": 4,
+        "server_span_count": 2,
+        "trace_links": [
+          {
+            "status": 200,
+            "trace_id": "37bf6759f91d76d3449202516f9d001e",
+            "client_span_id": "b71fe3f008106b3c",
+            "server_parent_id": "b71fe3f008106b3c",
+            "matches": true
+          },
+          {
+            "status": 503,
+            "trace_id": "0b51b929dffa77c826b26f4cf71248d6",
+            "client_span_id": "db5ff9703ccf8622",
+            "server_parent_id": "db5ff9703ccf8622",
+            "matches": true
+          }
+        ],
+        "failed_checks": [
+          "privacy_headers",
+          "wire_no_baggage",
+          "privacy_exported"
+        ]
+      },
+      "lifecycle": {
+        "server_pid": 46431,
+        "client_pid": 46439,
+        "server_exit": 0,
+        "client_exit": 0,
+        "server_stopped": true,
+        "client_stopped": true,
+        "listener": "127.0.0.1:39101",
+        "listener_closed": true,
+        "server_argv": [
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/bin/server"
+        ],
+        "client_argv": [
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/bin/client",
+          "--server",
+          "http://127.0.0.1:39101/support",
+          "--headers",
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/baggage_leak/outbound-headers.jsonl"
+        ],
+        "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/example",
+        "termination": "SIGTERM then bounded graceful shutdown; post-exit connection probe"
+      },
+      "module_mapping": {
+        "Path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+        "Version": "v0.72.0",
+        "Replace": {
+          "Path": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+          "Dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+          "GoMod": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+          "GoVersion": "1.26.0"
+        },
+        "Dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+        "GoMod": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+        "GoVersion": "1.26.0"
+      }
+    },
+    {
+      "case": "no_extraction",
+      "checker_exit": 1,
+      "contract": {
+        "checks": {
+          "process_lifecycle": true,
+          "response_statuses": true,
+          "completeness": true,
+          "status": true,
+          "correlation": false,
+          "privacy_headers": true,
+          "wire_no_baggage": true,
+          "privacy_exported": true
+        },
+        "pass": false,
+        "client_span_count": 4,
+        "server_span_count": 2,
+        "trace_links": [
+          {
+            "status": 200,
+            "trace_id": "8a8d82d70ab57e0985571edfa54219e6",
+            "client_span_id": "c10f9d1e822de254",
+            "server_parent_id": null,
+            "matches": false
+          },
+          {
+            "status": 503,
+            "trace_id": "79a5508b77cecf2297b7b13459a8ae09",
+            "client_span_id": "8314df2d99018bd0",
+            "server_parent_id": null,
+            "matches": false
+          }
+        ],
+        "failed_checks": [
+          "correlation"
+        ]
+      },
+      "lifecycle": {
+        "server_pid": 46635,
+        "client_pid": 46643,
+        "server_exit": 0,
+        "client_exit": 0,
+        "server_stopped": true,
+        "client_stopped": true,
+        "listener": "127.0.0.1:39051",
+        "listener_closed": true,
+        "server_argv": [
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/bin/server"
+        ],
+        "client_argv": [
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/bin/client",
+          "--server",
+          "http://127.0.0.1:39051/support",
+          "--headers",
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/no_extraction/outbound-headers.jsonl"
+        ],
+        "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/example",
+        "termination": "SIGTERM then bounded graceful shutdown; post-exit connection probe"
+      },
+      "module_mapping": {
+        "Path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+        "Version": "v0.72.0",
+        "Replace": {
+          "Path": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+          "Dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+          "GoMod": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+          "GoVersion": "1.26.0"
+        },
+        "Dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+        "GoMod": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+        "GoVersion": "1.26.0"
+      }
+    },
+    {
+      "case": "drop_spans",
+      "checker_exit": 1,
+      "contract": {
+        "checks": {
+          "process_lifecycle": true,
+          "response_statuses": true,
+          "completeness": false,
+          "status": false,
+          "correlation": false,
+          "privacy_headers": true,
+          "wire_no_baggage": true,
+          "privacy_exported": true
+        },
+        "pass": false,
+        "client_span_count": 0,
+        "server_span_count": 0,
+        "trace_links": [],
+        "failed_checks": [
+          "completeness",
+          "status",
+          "correlation"
+        ]
+      },
+      "lifecycle": {
+        "server_pid": 46841,
+        "client_pid": 46849,
+        "server_exit": 0,
+        "client_exit": 0,
+        "server_stopped": true,
+        "client_stopped": true,
+        "listener": "127.0.0.1:42221",
+        "listener_closed": true,
+        "server_argv": [
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/bin/server"
+        ],
+        "client_argv": [
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/bin/client",
+          "--server",
+          "http://127.0.0.1:42221/support",
+          "--headers",
+          "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/drop_spans/outbound-headers.jsonl"
+        ],
+        "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/example",
+        "termination": "SIGTERM then bounded graceful shutdown; post-exit connection probe"
+      },
+      "module_mapping": {
+        "Path": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+        "Version": "v0.72.0",
+        "Replace": {
+          "Path": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+          "Dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+          "GoMod": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+          "GoVersion": "1.26.0"
+        },
+        "Dir": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp",
+        "GoMod": "<ACCEPTED_PRIVATE_SOURCE>/copied/upstream/instrumentation/net/http/otelhttp/go.mod",
+        "GoVersion": "1.26.0"
+      }
+    }
+  ],
+  "build_commands": [
+    {
+      "label": "server-build-metadata",
+      "argv": [
+        "<GO>",
+        "version",
+        "-m",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/bin/server"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/adapted/example",
+      "exit": 0
+    },
+    {
+      "label": "client-build-metadata",
+      "argv": [
+        "<GO>",
+        "version",
+        "-m",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/bin/client"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/adapted/example",
+      "exit": 0
+    },
+    {
+      "label": "module",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json",
+        "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/adapted/example",
+      "exit": 0
+    },
+    {
+      "label": "baggage_leak-server-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/bin/server",
+        "./server"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/example",
+      "exit": 0
+    },
+    {
+      "label": "baggage_leak-client-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/bin/client",
+        "./client"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/example",
+      "exit": 0
+    },
+    {
+      "label": "server-build-metadata",
+      "argv": [
+        "<GO>",
+        "version",
+        "-m",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/bin/server"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/example",
+      "exit": 0
+    },
+    {
+      "label": "client-build-metadata",
+      "argv": [
+        "<GO>",
+        "version",
+        "-m",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/bin/client"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/example",
+      "exit": 0
+    },
+    {
+      "label": "module",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json",
+        "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/baggage_leak/example",
+      "exit": 0
+    },
+    {
+      "label": "no_extraction-server-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/bin/server",
+        "./server"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/example",
+      "exit": 0
+    },
+    {
+      "label": "no_extraction-client-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/bin/client",
+        "./client"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/example",
+      "exit": 0
+    },
+    {
+      "label": "server-build-metadata",
+      "argv": [
+        "<GO>",
+        "version",
+        "-m",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/bin/server"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/example",
+      "exit": 0
+    },
+    {
+      "label": "client-build-metadata",
+      "argv": [
+        "<GO>",
+        "version",
+        "-m",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/bin/client"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/example",
+      "exit": 0
+    },
+    {
+      "label": "module",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json",
+        "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/no_extraction/example",
+      "exit": 0
+    },
+    {
+      "label": "drop_spans-server-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/bin/server",
+        "./server"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/example",
+      "exit": 0
+    },
+    {
+      "label": "drop_spans-client-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/bin/client",
+        "./client"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/example",
+      "exit": 0
+    },
+    {
+      "label": "server-build-metadata",
+      "argv": [
+        "<GO>",
+        "version",
+        "-m",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/bin/server"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/example",
+      "exit": 0
+    },
+    {
+      "label": "client-build-metadata",
+      "argv": [
+        "<GO>",
+        "version",
+        "-m",
+        "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/bin/client"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/example",
+      "exit": 0
+    },
+    {
+      "label": "module",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json",
+        "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+      ],
+      "cwd": "<ACCEPTED_PRIVATE_SOURCE>/verification-runs/20261009T165745Z/_temporary/drop_spans/example",
+      "exit": 0
+    }
+  ],
+  "all_expected_outcomes_observed": true,
+  "disposable_variants_removed": true,
+  "finished_at_utc": "2026-10-09T17:02:35.775511+00:00",
+  "original_copied_sources_unchanged": true,
+  "adapted_source_sha256": {
+    "adapted/LICENSE": "1ae07514be1d7bb33f0698f8d91fb51b8b9fe1463157ec1c72081a49b9bc6f40",
+    "adapted/example/go.mod": "69f2c7d66061bfebc2d41f73b85093dcacf3e2abded40144355be607726fc782",
+    "adapted/example/go.sum": "5ffcfd3123da10b4a54f5e5034392566838296c36665c93748d29e5c5f691be5",
+    "adapted/example/client/client.go": "47fa1aa9c39c548f5f7577535bc51e5d67b91dce3986a7eb7c38a14a2fc5f516",
+    "adapted/example/server/server.go": "09de92b47ac790411634c3d3fe49dce1d90c7df9584a1faa3956a06247a7c463"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "server_pid": 55978,
+  "client_pid": 55986,
+  "server_exit": 0,
+  "client_exit": 0,
+  "server_stopped": true,
+  "client_stopped": true,
+  "listener": "127.0.0.1:43185",
+  "listener_closed": true,
+  "server_argv": [
+    "<WORKSPACE>/verification-runs/run/_temporary/no_extraction/bin/server"
+  ],
+  "client_argv": [
+    "<WORKSPACE>/verification-runs/run/_temporary/no_extraction/bin/client",
+    "--server",
+    "http://127.0.0.1:43185/support",
+    "--headers",
+    "<WORKSPACE>/verification-runs/run/no_extraction/outbound-headers.jsonl"
+  ],
+  "cwd": "<WORKSPACE>/verification-runs/run/_temporary/no_extraction/example",
+  "termination": "SIGTERM then bounded graceful shutdown; post-exit connection probe"
+}

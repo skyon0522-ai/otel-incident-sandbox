@@ -1,0 +1,45 @@
+{
+  "started_at_utc": "2026-10-09T17:24:13.617678+00:00",
+  "python_version": "3.12.3",
+  "repository": "<REPOSITORY>",
+  "workspace": "<FAILED_WORKSPACE>",
+  "fresh_cache_initially_absent": true,
+  "commands": [
+    {
+      "label": "go-version",
+      "argv": [
+        "<GO>",
+        "version"
+      ],
+      "cwd": "<FAILED_WORKSPACE>",
+      "exit": 0
+    },
+    {
+      "label": "local-module",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json",
+        "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+      ],
+      "cwd": "<FAILED_WORKSPACE>/adapted/example",
+      "exit": 0
+    },
+    {
+      "label": "server-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<FAILED_WORKSPACE>/verification-runs/run/bin/server",
+        "./server"
+      ],
+      "cwd": "<FAILED_WORKSPACE>/adapted/example",
+      "exit": 1
+    }
+  ],
+  "verifier_sha256": "95c31b21c5a28ef030e7621a0417242c5c4a2859483e2dbe06c70e75cf17f951",
+  "go_version": "go version go1.27.2 linux/amd64",
+  "resolved_copied_source": "<REPOSITORY>/upstream/instrumentation/net/http/otelhttp"
+}

@@ -1,0 +1,17 @@
+{
+  "expected_failed_check": "completeness",
+  "changes": [
+    {
+      "path": "client/client.go",
+      "before_sha256": "09c32f690c7afcae0e6ca783e062693e584acda0bea1df05c466399ca3229ece",
+      "after_sha256": "18a1c827265c6509d69d23ffea47f2bc9c4bb7c1afaf03a73c653184bf6314a5",
+      "diff": "--- \n+++ \n@@ -41,7 +41,7 @@\n \t// For the demonstration, use sdktrace.AlwaysSample sampler to sample all traces.\n \t// In a production application, use sdktrace.ProbabilitySampler with a desired probability.\n \ttp := sdktrace.NewTracerProvider(\n-\t\tsdktrace.WithSampler(sdktrace.AlwaysSample()),\n+\t\tsdktrace.WithSampler(sdktrace.NeverSample()),\n \t\tsdktrace.WithBatcher(exporter),\n \t)\n \totel.SetTracerProvider(tp)\n"
+    },
+    {
+      "path": "server/server.go",
+      "before_sha256": "b97b29fcca4bd46e6174e3bcf7d0f4e8ac371dd27479b19783e7551ceb868041",
+      "after_sha256": "924ea7efc3d0c869fbc099c8f459c95ce4b1e78599e02e79f96c3f852d5304a2",
+      "diff": "--- \n+++ \n@@ -45,7 +45,7 @@\n \t// For the demonstration, use sdktrace.AlwaysSample sampler to sample all traces.\n \t// In a production application, use sdktrace.ProbabilitySampler with a desired probability.\n \ttp := sdktrace.NewTracerProvider(\n-\t\tsdktrace.WithSampler(sdktrace.AlwaysSample()),\n+\t\tsdktrace.WithSampler(sdktrace.NeverSample()),\n \t\tsdktrace.WithBatcher(exporter),\n \t\tsdktrace.WithResource(resource.NewWithAttributes(semconv.SchemaURL, semconv.ServiceName(\"SupportSandboxServer\"))),\n \t)\n"
+    }
+  ]
+}

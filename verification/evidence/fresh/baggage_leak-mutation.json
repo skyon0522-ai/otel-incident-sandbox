@@ -1,0 +1,17 @@
+{
+  "expected_failed_check": "privacy_exported",
+  "changes": [
+    {
+      "path": "client/client.go",
+      "before_sha256": "09c32f690c7afcae0e6ca783e062693e584acda0bea1df05c466399ca3229ece",
+      "after_sha256": "177d4ed9eef0cfedeeefa58e3373676d1ba5f9f2368563f3d3d2fba9bd5b6254",
+      "diff": "--- \n+++ \n@@ -45,7 +45,7 @@\n \t\tsdktrace.WithBatcher(exporter),\n \t)\n \totel.SetTracerProvider(tp)\n-\totel.SetTextMapPropagator(propagation.TraceContext{})\n+\totel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator(propagation.TraceContext{}, propagation.Baggage{}))\n \treturn tp, err\n }\n \n"
+    },
+    {
+      "path": "server/server.go",
+      "before_sha256": "b97b29fcca4bd46e6174e3bcf7d0f4e8ac371dd27479b19783e7551ceb868041",
+      "after_sha256": "74a876e71c89a9115ee945c61b54249d639e84ceb46c936584c5e32d6f6e6126",
+      "diff": "--- \n+++ \n@@ -22,6 +22,8 @@\n \t\"time\"\n \n \t\"go.opentelemetry.io/otel\"\n+\t\"go.opentelemetry.io/otel/attribute\"\n+\t\"go.opentelemetry.io/otel/baggage\"\n \t\"go.opentelemetry.io/otel/exporters/stdout/stdoutmetric\"\n \t\"go.opentelemetry.io/otel/exporters/stdout/stdouttrace\"\n \t\"go.opentelemetry.io/otel/propagation\"\n@@ -50,7 +52,7 @@\n \t\tsdktrace.WithResource(resource.NewWithAttributes(semconv.SchemaURL, semconv.ServiceName(\"SupportSandboxServer\"))),\n \t)\n \totel.SetTracerProvider(tp)\n-\totel.SetTextMapPropagator(propagation.TraceContext{})\n+\totel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator(propagation.TraceContext{}, propagation.Baggage{}))\n \treturn tp, err\n }\n \n@@ -93,7 +95,8 @@\n \thelloHandler := func(w http.ResponseWriter, req *http.Request) {\n \t\t_ = json.NewEncoder(os.Stderr).Encode(map[string]any{\"kind\": \"received_headers\", \"traceparent\": req.Header.Get(\"traceparent\"), \"baggage_present\": req.Header.Get(\"baggage\") != \"\"})\n \t\tspan := trace.SpanFromContext(req.Context())\n-\t\tspan.AddEvent(\"support request handled\")\n+\t\tbag := baggage.FromContext(req.Context())\n+\t\tspan.AddEvent(\"support request handled\", trace.WithAttributes(attribute.String(\"customer_email\", bag.Member(\"username\").Value()), attribute.String(\"api_token\", bag.Member(\"api_token\").Value())))\n \t\tif req.URL.Query().Get(\"failure\") == \"503\" {\n \t\t\tw.WriteHeader(http.StatusServiceUnavailable)\n \t\t\t_, _ = io.WriteString(w, \"temporarily unavailable\\n\")\n"
+    }
+  ]
+}

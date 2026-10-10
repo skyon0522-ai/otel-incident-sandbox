@@ -1,0 +1,5 @@
+{"case": "positive", "checker_exit": 0, "failed_checks": [], "client_spans": 4, "server_spans": 2}
+{"case": "baggage_leak", "checker_exit": 1, "failed_checks": ["privacy_headers", "wire_no_baggage", "privacy_exported"], "client_spans": 4, "server_spans": 2}
+{"case": "no_extraction", "checker_exit": 1, "failed_checks": ["correlation"], "client_spans": 4, "server_spans": 2}
+{"case": "drop_spans", "checker_exit": 1, "failed_checks": ["completeness", "status", "correlation"], "client_spans": 0, "server_spans": 0}
+{"complete": true, "all_expected_outcomes_observed": true, "source_unchanged": true, "run_directory": "<WORKSPACE>/verification-runs/run"}

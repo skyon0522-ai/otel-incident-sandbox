@@ -1,0 +1,264 @@
+{
+  "started_at_utc": "2026-10-09T17:30:13.201580+00:00",
+  "python_version": "3.12.3",
+  "repository": "<REPOSITORY>",
+  "workspace": "<WORKSPACE>",
+  "fresh_cache_initially_absent": true,
+  "commands": [
+    {
+      "label": "go-version",
+      "argv": [
+        "<GO>",
+        "version"
+      ],
+      "cwd": "<WORKSPACE>",
+      "exit": 0
+    },
+    {
+      "label": "local-module",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json",
+        "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
+      ],
+      "cwd": "<WORKSPACE>/adapted/example",
+      "exit": 0
+    },
+    {
+      "label": "server-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<WORKSPACE>/verification-runs/run/bin/server",
+        "./server"
+      ],
+      "cwd": "<WORKSPACE>/adapted/example",
+      "exit": 0
+    },
+    {
+      "label": "client-build",
+      "argv": [
+        "<GO>",
+        "build",
+        "-o",
+        "<WORKSPACE>/verification-runs/run/bin/client",
+        "./client"
+      ],
+      "cwd": "<WORKSPACE>/adapted/example",
+      "exit": 0
+    },
+    {
+      "label": "retained-verifier",
+      "argv": [
+        "<PYTHON>",
+        "-B",
+        "<WORKSPACE>/verify_adapted.py"
+      ],
+      "cwd": "<WORKSPACE>",
+      "exit": 0
+    },
+    {
+      "label": "modules-verify",
+      "argv": [
+        "<GO>",
+        "mod",
+        "verify"
+      ],
+      "cwd": "<WORKSPACE>/adapted/example",
+      "exit": 0
+    },
+    {
+      "label": "module-list",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json",
+        "all"
+      ],
+      "cwd": "<WORKSPACE>/adapted/example",
+      "exit": 1
+    },
+    {
+      "label": "module-list",
+      "argv": [
+        "<GO>",
+        "list",
+        "-m",
+        "-json",
+        "all"
+      ],
+      "cwd": "<WORKSPACE>/adapted/example",
+      "exit": 0
+    }
+  ],
+  "verifier_sha256": "95c31b21c5a28ef030e7621a0417242c5c4a2859483e2dbe06c70e75cf17f951",
+  "go_version": "go version go1.27.2 linux/amd64",
+  "resolved_copied_source": "<REPOSITORY>/upstream/instrumentation/net/http/otelhttp",
+  "post_verification_metadata_resume": {
+    "reason": "full module-list query initially lacked six exact-version .info files in the file proxy",
+    "extra_module_metadata_files": 6,
+    "extra_source_zip_downloads": 0,
+    "functional_contract_rerun": false,
+    "entrypoint_source_sha256": "e8646b2b6cde3e0c710bb1838060572510a96c757913bf7639c21b5c4a34be67",
+    "executed_tail_starts_at_source_line": 56
+  },
+  "teardown": [
+    {
+      "case": "positive",
+      "owned_pids_present": [],
+      "listener": "127.0.0.1:45951",
+      "connect_errno": 111
+    },
+    {
+      "case": "baggage_leak",
+      "owned_pids_present": [],
+      "listener": "127.0.0.1:44683",
+      "connect_errno": 111
+    },
+    {
+      "case": "no_extraction",
+      "owned_pids_present": [],
+      "listener": "127.0.0.1:43185",
+      "connect_errno": 111
+    },
+    {
+      "case": "drop_spans",
+      "owned_pids_present": [],
+      "listener": "127.0.0.1:41309",
+      "connect_errno": 111
+    }
+  ],
+  "all_expected_outcomes_observed": true,
+  "staged_47_source_files_unchanged": true,
+  "binaries_sha256": {
+    "server": "e9d233c301c8a7ffe94204167cb18b09ee0a331e5804477a7723fcc11a900433",
+    "client": "693a1126cc29288c377fda5762373704a9be33059e58c9c34a42a8af4cebd804"
+  },
+  "downloaded_modules": [
+    {
+      "module": "github.com/cespare/xxhash/v2",
+      "version": "v2.3.0",
+      "zip_sha256": "145a26cdc7c49db566017b807c4989ee7f7ddeb569423e9cb99f995fac3621d3",
+      "cached_h1": "h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=",
+      "original_go_sum_h1": "h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "github.com/felixge/httpsnoop",
+      "version": "v1.1.0",
+      "zip_sha256": "e3405a361843f8e69f64e41b523512925cd50fd5ea108b7912534922c31b00e7",
+      "cached_h1": "h1:3YtUj32ZZkqZtt3sZZsClsymw/QDuVfpNhoA31zeORc=",
+      "original_go_sum_h1": "h1:3YtUj32ZZkqZtt3sZZsClsymw/QDuVfpNhoA31zeORc=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "github.com/go-logr/logr",
+      "version": "v1.4.4",
+      "zip_sha256": "3ab107c1d280ce798eaa744efd595982fa709d4023f3f38d24189827483c1710",
+      "cached_h1": "h1:tG4xh9yMsRCAiodLVTxyrkzSZ9+o0L1Kg/+cPVcbP/8=",
+      "original_go_sum_h1": "h1:tG4xh9yMsRCAiodLVTxyrkzSZ9+o0L1Kg/+cPVcbP/8=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "github.com/go-logr/stdr",
+      "version": "v1.2.2",
+      "zip_sha256": "9dd6893bf700198485ae699640b49bc1efbc6c73b37cb5792a0476e1fd8f7fef",
+      "cached_h1": "h1:hSWxHoqTgW2S2qGc0LTAI563KZ5YKYRhT3MFKZMbjag=",
+      "original_go_sum_h1": "h1:hSWxHoqTgW2S2qGc0LTAI563KZ5YKYRhT3MFKZMbjag=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "github.com/google/uuid",
+      "version": "v1.6.0",
+      "zip_sha256": "d0f02f377217f42702e259684e06441edbf5140dddcc34ba9bea56038b38a6ed",
+      "cached_h1": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=",
+      "original_go_sum_h1": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/auto/sdk",
+      "version": "v1.2.1",
+      "zip_sha256": "a08a16fc0a7041cdb875f47a260a56000632212c85f65a302a043c76380c8335",
+      "cached_h1": "h1:jXsnJ4Lmnqd11kwkBV2LgLoFMZKizbCi5fNZ/ipaZ64=",
+      "original_go_sum_h1": "h1:jXsnJ4Lmnqd11kwkBV2LgLoFMZKizbCi5fNZ/ipaZ64=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/otel",
+      "version": "v1.47.0",
+      "zip_sha256": "275ce19c11b3f26830a4b3d884e6a59f3e4ef51e519ef3fc3bcbcc5e71f9b37d",
+      "cached_h1": "h1:j7ALJ/zgkS7Z6aeJW09p8VC9804bC+PpeTfCD4XPnOM=",
+      "original_go_sum_h1": "h1:j7ALJ/zgkS7Z6aeJW09p8VC9804bC+PpeTfCD4XPnOM=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/otel/exporters/stdout/stdoutmetric",
+      "version": "v1.47.0",
+      "zip_sha256": "7ca6992d0343e6f8009101b72bf6bdf3b1a8664f8a271b4555e11fc009c69735",
+      "cached_h1": "h1:ww5DYBpMKcqLdxjWrhGUIh6O+ZfvZUaMk4niVyNQPEQ=",
+      "original_go_sum_h1": "h1:ww5DYBpMKcqLdxjWrhGUIh6O+ZfvZUaMk4niVyNQPEQ=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/otel/exporters/stdout/stdouttrace",
+      "version": "v1.47.0",
+      "zip_sha256": "0e8bf8b320296667b2997a42b1e0725d8f169b7f5f97ef4ac71fc759eee72024",
+      "cached_h1": "h1:N3YQCxjxQ/bMjyc3heladfRm9t9RTksGQH8z4w6yU/0=",
+      "original_go_sum_h1": "h1:N3YQCxjxQ/bMjyc3heladfRm9t9RTksGQH8z4w6yU/0=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/otel/log",
+      "version": "v1.47.0",
+      "zip_sha256": "6f99ff1e779241c778d62872f651ea7bafce80246b5cfac321aa133f196ad811",
+      "cached_h1": "h1:cOTS1CcLbSQeZKanGJ+0JpF/+t4PELi3O3bbl2lqCcI=",
+      "original_go_sum_h1": "h1:cOTS1CcLbSQeZKanGJ+0JpF/+t4PELi3O3bbl2lqCcI=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/otel/metric",
+      "version": "v1.47.0",
+      "zip_sha256": "cfa35ad1f540114d39a381cf8773ba7d2aab47f0fa42040d409e86dee9ab27f6",
+      "cached_h1": "h1:4PptaldXx3Eat1XjMZ68pPJEs5wrhlemctZE9a3UdWY=",
+      "original_go_sum_h1": "h1:4PptaldXx3Eat1XjMZ68pPJEs5wrhlemctZE9a3UdWY=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/otel/sdk",
+      "version": "v1.47.0",
+      "zip_sha256": "c01b323e4173c1700ee0352533bdc26816d1e4fa33fb15a0c24b35f9978c4918",
+      "cached_h1": "h1:zWXEr4j2lFefG87TU6Yg8a7ngfohIKFZHKp0Hf5hC6I=",
+      "original_go_sum_h1": "h1:zWXEr4j2lFefG87TU6Yg8a7ngfohIKFZHKp0Hf5hC6I=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/otel/sdk/metric",
+      "version": "v1.47.0",
+      "zip_sha256": "0d63b5fa4f373296a54137ed76e74dfc0b267bb5e579f313d1e76eb1bd919c37",
+      "cached_h1": "h1:lfISg2j93VT6yqdk9OfUaZmw/GfcZqCCV3jdXtsPnKw=",
+      "original_go_sum_h1": "h1:lfISg2j93VT6yqdk9OfUaZmw/GfcZqCCV3jdXtsPnKw=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "go.opentelemetry.io/otel/trace",
+      "version": "v1.47.0",
+      "zip_sha256": "dfffa6cb848954b5d3413007b6553ad3e508a9fc992a81ab4bd9026c236229be",
+      "cached_h1": "h1:JOjX/Oci8K94QHddo+bbfya/Ai/nf6/dt9ZfrFNWSrM=",
+      "original_go_sum_h1": "h1:JOjX/Oci8K94QHddo+bbfya/Ai/nf6/dt9ZfrFNWSrM=",
+      "matches_original_go_sum": true
+    },
+    {
+      "module": "golang.org/x/sys",
+      "version": "v0.49.0",
+      "zip_sha256": "e73a06591ca0d7016ce3ccb45c36a8ed7128468aecc1a357f94d815c760c6b31",
+      "cached_h1": "h1:XbzkgYJHdqh/8m2Uu0W/dQv8nktxx4BFHp1M0gROTXA=",
+      "original_go_sum_h1": "h1:XbzkgYJHdqh/8m2Uu0W/dQv8nktxx4BFHp1M0gROTXA=",
+      "matches_original_go_sum": true
+    }
+  ],
+  "finished_at_utc": "2026-10-09T17:35:25.049863+00:00"
+}
