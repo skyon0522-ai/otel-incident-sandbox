@@ -4,6 +4,8 @@ A local Go example for engineers who want to keep a support request traceable wh
 
 The recorded positive contract has **four client spans and two server spans**, with matching trace and parent links. HTTP 200 leaves HTTP span status Unset; HTTP 503 records Error. Synthetic customer email/token baggage is absent from post-injection outbound headers and exported spans/logs. The three deliberately broken variants must be rejected.
 
+The [run procedure](#try-the-example) exercises the copied instrumentation through the adapted client and server. Read the [verification contract](VERIFICATION.md) for each positive and negative case, then use the [repository map](#repository-map) to inspect the source and its derivation.
+
 ## Try the example
 
 The observed environment is Linux, Go 1.27.2 and Python 3.12.3. Python needs only its standard library. Put an existing Go executable on PATH, or supply `--go /path/to/go`. Go fetches the exact dependencies pinned in [example/go.mod](example/go.mod) and [example/go.sum](example/go.sum); no Docker or external telemetry backend is required. The normal GOPROXY environment setting is honored.
